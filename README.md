@@ -1,4 +1,4 @@
-# Scripts and build tools to build Samsung's DALi framework on various platforms
+# DALi 3D Framework Build Tools
 This is a collection of build scripts and tools for buildung Samsung's DALi 3D toolkit
 on various platforms.
 
