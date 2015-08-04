@@ -17,14 +17,6 @@
 
 export DALI_BUILD_HOME=~/dali-nodejs
 
-# parallel make
-export NUMCPUS=`grep -c '^processor' /proc/cpuinfo`
-# Hyperthreading should be supported for the automatic configuration
-# of the number of processes used for 'make':
-export DALI_MAKE_CORS=`python -c "print (int(${NUMCPUS} * 2 - 1))"`
-echo "System has $NUMCPUS CPU cores with, running build with $DALI_MAKE_CORS processes."
-# Set the number of processes for the V8 build process to $DALI_MAKE_CORS
-sed -i "s/make -j8/make -j$DALI_MAKE_CORS/" dali-core/build/scripts/dali_env
 
 # Configure your Tizen Gerrit account name. Follow the development
 # environment setup guide, you plan to use your own account.
@@ -41,6 +33,16 @@ git clone ssh://$TIZEN_USER@review.tizen.org:29418/platform/core/uifw/dali-core
 cd dali-core
 git checkout devel/master
 cd $DALI_BUILD_HOME
+
+
+# parallel make
+export NUMCPUS=`grep -c '^processor' /proc/cpuinfo`
+# Hyperthreading should be supported for the automatic configuration
+# of the number of processes used for 'make':
+export DALI_MAKE_CORS=`python -c "print (int(${NUMCPUS} * 2 - 1))"`
+echo "System has $NUMCPUS CPU cores with, running build with $DALI_MAKE_CORS processes."
+# Set the number of processes for the V8 build process to $DALI_MAKE_CORS
+sed -i "s/make -j8/make -j$DALI_MAKE_CORS/" dali-core/build/scripts/dali_env
 
 
 # Initiate dali environment setup
