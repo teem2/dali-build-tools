@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # The MIT License (MIT)
 # Copyright (c) 2015 Teem2 LLC
 #
@@ -37,8 +38,8 @@ cd $DALI_BUILD_HOME
 
 # parallel make
 export NUMCPUS=`grep -c '^processor' /proc/cpuinfo`
-# Hyperthreading should be supported for the automatic configuration
-# of the number of processes used for 'make':
+# Since modern CPUs should support hyperthreading, we can use at
+# least use double the number of CPUs -1 for 'make':
 export DALI_MAKE_CORS=`python -c "print (int(${NUMCPUS} * 2 - 1))"`
 echo "System has $NUMCPUS CPU cores with, running build with $DALI_MAKE_CORS processes."
 # Set the number of processes for the V8 build process to $DALI_MAKE_CORS
