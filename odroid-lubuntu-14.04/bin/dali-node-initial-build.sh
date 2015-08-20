@@ -31,7 +31,6 @@ rm -rf *
 # get dali-core repo first
 git clone ssh://$TIZEN_USER@review.tizen.org:29418/platform/core/uifw/dali-core
 cd dali-core
-git checkout devel/master
 cd $DALI_BUILD_HOME
 
 
@@ -61,7 +60,6 @@ make install -j$DALI_MAKE_CORS
 cd $DALI_BUILD_HOME
 git clone ssh://$TIZEN_USER@review.tizen.org:29418/platform/core/uifw/dali-adaptor
 cd dali-adaptor
-git checkout devel/master
 cd $DALI_BUILD_HOME/dali-adaptor/build/tizen
 autoreconf --install
 ./configure 'CXXFLAGS=-O0 -g' --enable-gles=20 --enable-profile=UBUNTU --prefix=$DESKTOP_PREFIX --enable-debug --with-node-js=/home/odroid/node-v0.12.4/deps/uv/include/
@@ -71,7 +69,6 @@ make install -j$DALI_MAKE_CORS
 cd $DALI_BUILD_HOME
 git clone ssh://$TIZEN_USER@review.tizen.org:29418/platform/core/uifw/dali-toolkit
 cd dali-toolkit
-git checkout devel/master
 cd $DALI_BUILD_HOME/dali-toolkit/build/tizen
 autoreconf --install
 ./configure --prefix=$DESKTOP_PREFIX --enable-debug
@@ -81,7 +78,6 @@ make install -j$DALI_MAKE_CORS
 cd $DALI_BUILD_HOME
 git clone ssh://$TIZEN_USER@review.tizen.org:29418/platform/core/uifw/dali-demo
 cd dali-demo
-git checkout devel/master
 # DALi demo does not work with current version of DALi + Node.js
 cd $DALI_BUILD_HOME/dali-demo/build/tizen
 cmake -DCMAKE_INSTALL_PREFIX=$DESKTOP_PREFIX .
