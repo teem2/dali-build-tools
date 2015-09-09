@@ -20,7 +20,7 @@
 #   A number of additional packages will be installed during the build.
 #
 
-export DALI_BUILD_HOME=~/dali-nodejs
+export DALI_BUILD_HOME=~/dali-nodejs-stable
 
 # Used to check out specific version of DALi using
 # git checkout `git rev-list -n 1 --before="$VERSION_DATE" origin/master`
