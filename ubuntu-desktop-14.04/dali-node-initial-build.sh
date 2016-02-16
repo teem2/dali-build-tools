@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # The MIT License (MIT)
 # Copyright (c) 2015 Teem2 LLC
 #
@@ -11,7 +11,7 @@
 #     The Node.js source code should be in folder:
 #     /home/$USER/node-v0.12.4
 #     If you have the Node.js source code in a different location, you can
-#     adjust the NODE_FOLDER variable below.
+#     adjust the node_folder variable below.
 #
 #   + yuidocjs 0.5
 #     sudo npm install -g yuidocjs@0.5
@@ -19,16 +19,19 @@
 #   + node-gyp
 #     sudo npm install -g node-gyp
 
-
+### CONFIGURATON OPTIONS ###
 export DALI_BUILD_HOME=~/dali-nodejs
-export NODE_FOLDER=`echo "/home/$USER"`/node-v0.12.4
-echo "Using Node.js folder '$NODE_FOLDER'"
+node_folder=`echo "/home/$USER"`/node-v0.12.4
+# Enable network logging for Dali adaptor. Possible values: 0 | 1
+enable_network_logging=1 
 
 # Configure your Tizen Gerrit account name. Follow the development
 # environment setup guide, you plan to use your own account.
 # https://source.tizen.org/development/developer-guide/environment-setup
 export TIZEN_USER=rteem
 
+
+### SCRIPT STARTS ###
 mkdir $DALI_BUILD_HOME
 cd $DALI_BUILD_HOME
 
@@ -68,7 +71,15 @@ git clone ssh://$TIZEN_USER@review.tizen.org:29418/platform/core/uifw/dali-adapt
 cd dali-adaptor
 cd $DALI_BUILD_HOME/dali-adaptor/build/tizen
 autoreconf --install
-./configure 'CXXFLAGS=-O0 -g' --enable-gles=20 --enable-profile=UBUNTU --prefix=$DESKTOP_PREFIX --enable-debug  --with-libuv=$NODE_FOLDER/deps/uv/include/
+
+if [ $enable_network_logging -eq 1 ]
+then
+    ./configure 'CXXFLAGS=-O0 -g' --enable-gles=20 --enable-profile=UBUNTU --prefix=$DESKTOP_PREFIX --enable-debug  --with-libuv=$node_folder/deps/uv/include/ --enable-networklogging
+else
+    ./configure 'CXXFLAGS=-O0 -g' --enable-gles=20 --enable-profile=UBUNTU --prefix=$DESKTOP_PREFIX --enable-debug  --with-libuv=$node_folder/deps/uv/include/
+fi
+
+
 make install -j$DALI_MAKE_CORS
 
 # dali-toolkit build
