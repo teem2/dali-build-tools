@@ -8,6 +8,10 @@
 #   + Node.js 0.12.4
 #     Build from source following these instructions
 #     https://github.com/joyent/node/wiki/installation#building-on-linux
+#     The Node.js source code should be in folder:
+#     /home/$USER/node-v0.12.4
+#     If you have the Node.js source code in a different location, you can
+#     adjust the NODE_FOLDER variable below.
 #
 #   + yuidocjs 0.5
 #     sudo npm install -g yuidocjs@0.5
@@ -17,7 +21,8 @@
 
 
 export DALI_BUILD_HOME=~/dali-nodejs
-
+export NODE_FOLDER=`echo "/home/$USER"`/node-v0.12.4
+echo "Using Node.js folder '$NODE_FOLDER'"
 
 # Configure your Tizen Gerrit account name. Follow the development
 # environment setup guide, you plan to use your own account.
@@ -63,7 +68,7 @@ git clone ssh://$TIZEN_USER@review.tizen.org:29418/platform/core/uifw/dali-adapt
 cd dali-adaptor
 cd $DALI_BUILD_HOME/dali-adaptor/build/tizen
 autoreconf --install
-./configure 'CXXFLAGS=-O0 -g' --enable-gles=20 --enable-profile=UBUNTU --prefix=$DESKTOP_PREFIX --enable-debug  --with-libuv=/home/dali/node-v0.12.4/deps/uv/include/
+./configure 'CXXFLAGS=-O0 -g' --enable-gles=20 --enable-profile=UBUNTU --prefix=$DESKTOP_PREFIX --enable-debug  --with-libuv=$NODE_FOLDER/deps/uv/include/
 make install -j$DALI_MAKE_CORS
 
 # dali-toolkit build
