@@ -1,0 +1,12 @@
+{
+  "name": "tizen-package-downloader",
+  "description": "Script for downloading Tizen TV image snapshot packages for a date.",
+  "author": "Raju Bitter <raju@teem.nu>",
+  "dependencies": {
+    "sync-request": "3.0.x",
+    "download": "4.4.x"
+  },
+  "devDependencies": {
+  },
+  "engine": "node >= 0.12.4"
+}
