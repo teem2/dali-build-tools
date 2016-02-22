@@ -4,6 +4,9 @@ require 'nokogiri'
 # Script parses the HTML document containing the list of packages for a Tizen TV snapshot.
 # All links to RPMs are parsed, and the corresponding files downloaded into a folder
 # with the name of the value of the var RELEASE_TAG
+#
+# Requirements: Tested with Ruby 2.0 on Ubuntu 14.04 and OS X.
+# You need to install the nokogiri gem before running the script.
 
 def get_html(url)
   puts "loading URL: " + url
