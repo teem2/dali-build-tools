@@ -1,0 +1,781 @@
+dali@xps13:~/odroid-feb/tmp$ sudo minicom
+[sudo] password for dali: 
+
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Jan  1 2014, 17:13:19.
+Port /dev/ttyUSB0, 23:49:41
+
+Press CTRL-A Z for help on special keys
+
+
+
+U-Boot 2015.07-gac8a6b49e-TIZEN.org (Jan 29 2016 - 10:29:34) for ODROID-XU3
+
+CPU:   Exynos5422@800MHz
+Model: Odroid XU3 based on EXYNOS5422
+DRAM:  2 GiB
+MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 1
+In:    serial
+Out:   serial
+Err:   serial
+Net:   No ethernet found.
+Hit any key to stop autoboot:  0 
+## Error: "checkboard" not defined
+reading exynos5422-odroidxu3.dtb
+46323 bytes read in 13 ms (3.4 MiB/s)
+reading uInitrd
+** Unable to read file uInitrd **
+reading zImage
+6970800 bytes read in 184 ms (36.1 MiB/s)
+Kernel image @ 0x40007fc0 [ 0x000000 - 0x6a5db0 ]
+## Flattened Device Tree blob at 40800000
+   Booting using the fdt blob at 0x40800000
+   Loading Device Tree to 4fff1000, end 4ffff4f2 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x100
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.0.0-23.11-arm-odroidxu3 (abuild@w19) (gcc version 4.9.2 20150209 (prerelease) (Tizen) ) #1 SMP PREEMPT Fri Jan 29 10:43:14 UTC 2016
+[    0.000000] CPU: ARMv7 Processor [410fc073] revision 3 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: Hardkernel Odroid XU3
+[    0.000000] cma: Reserved 64 MiB at 0xba800000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] Samsung CPU ID: 0xe5422001
+[    0.000000] Running under secure firmware.
+[    0.000000] PERCPU: Embedded 12 pages/cpu @ee58c000 s16512 r8192 d24448 u49152
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 512850
+[    0.000000] Kernel command line: root=/dev/mmcblk0p2 rootfstype=ext4 rootwait console=ttySAC2,115200n8
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1957432K/2058240K available (10384K kernel code, 671K rwdata, 3520K rodata, 732K init, 365K bss, 35272K reserved, 65536K cma-reserved, 1230848K)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0d9c2f0   (13905 kB)
+[    0.000000]       .init : 0xc0d9d000 - 0xc0e54000   ( 732 kB)
+[    0.000000]       .data : 0xc0e54000 - 0xc0efbe84   ( 672 kB)
+[    0.000000]        .bss : 0xc0efbe84 - 0xc0f574b0   ( 366 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] L2C: failed to init: -19
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000010] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956969942ns
+[    0.000925] Console: colour dummy device 80x30
+[    0.000965] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=120000)
+[    0.000989] pid_max: default: 32768 minimum: 301
+[    0.001147] Security Framework initialized
+[    0.001218] Smack:  Initializing.
+[    0.001312] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001333] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.002465] Initializing cgroup subsys memory
+[    0.002533] Initializing cgroup subsys devices
+[    0.002563] Initializing cgroup subsys freezer
+[    0.002592] Initializing cgroup subsys net_cls
+[    0.002651] CPU: Testing write buffer coherency: ok
+[    0.002707] ftrace: allocating 34290 entries in 101 pages
+[    0.076655] CPU0: update cpu_capacity 448
+[    0.076680] CPU0: thread -1, cpu 0, socket 1, mpidr 80000100
+[    0.077024] Setting up static identity map for 0x4096a040 - 0x4096a098
+[    0.077452] ARM CCI driver probed
+[    0.077706] Exynos MCPM support installed
+[    0.105826] CPU1: update cpu_capacity 1535
+[    0.105834] CPU1: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.115795] CPU2: update cpu_capacity 1535
+[    0.115803] CPU2: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.125802] CPU3: update cpu_capacity 1535
+[    0.125811] CPU3: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.135801] CPU4: update cpu_capacity 1535
+[    0.135809] CPU4: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.145805] CPU5: update cpu_capacity 448
+[    0.145815] CPU5: thread -1, cpu 1, socket 1, mpidr 80000101
+[    0.155797] CPU6: update cpu_capacity 448
+[    0.155806] CPU6: thread -1, cpu 2, socket 1, mpidr 80000102
+[    0.165768] CPU7: update cpu_capacity 448
+[    0.165777] CPU7: thread -1, cpu 3, socket 1, mpidr 80000103
+[    0.165894] Brought up 8 CPUs
+[    0.165967] SMP: Total of 8 processors activated (384.00 BogoMIPS).
+[    0.165981] CPU: WARNING: CPU(s) started in wrong/inconsistent modes (primary CPU mode 0x1a)
+[    0.165992] CPU: This may indicate a broken bootloader or firmware.
+[    0.167249] devtmpfs: initialized
+[    0.170416] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 3
+[    0.177096] pinctrl core: initialized pinctrl subsystem
+[    0.208016] NET: Registered protocol family 16
+[    0.209981] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.225831] cpuidle: using governor ladder
+[    0.245829] cpuidle: using governor menu
+[    0.270171] exynos-audss-clk 3810000.audss-clock-controller: setup completed
+[    0.282725] EXYNOS5420 PMU initialized
+[    0.345437] SCSI subsystem initialized
+[    0.346138] usbcore: registered new interface driver usbfs
+[    0.346292] usbcore: registered new interface driver hub
+[    0.346557] usbcore: registered new device driver usb
+[    0.367339] vdd_ldo9: ramp_delay not set
+[    0.376724] vdd_ldo13: ramp_delay not set
+[    0.382026] vdd_ldo15: ramp_delay not set
+[    0.391258] vdd_sd: ramp_delay not set
+[    0.439658] s3c-i2c 12c60000.i2c: slave address 0x00
+[    0.439682] s3c-i2c 12c60000.i2c: bus frequency set to 65 KHz
+[    0.441111] s3c-i2c 12c60000.i2c: i2c-0: S3C I2C adapter
+[    0.441367] s3c-i2c 12c80000.i2c: slave address 0x00
+[    0.441390] s3c-i2c 12c80000.i2c: bus frequency set to 65 KHz
+[    0.441965] s3c-i2c 12c80000.i2c: i2c-2: S3C I2C adapter
+[    0.442219] media: Linux media interface: v0.10
+[    0.442356] Linux video capture interface: v2.00
+[    0.546404] Advanced Linux Sound Architecture Driver Initialized.
+[    0.547595] Bluetooth: Core ver 2.20
+[    0.547679] NET: Registered protocol family 31
+[    0.547693] Bluetooth: HCI device and connection manager initialized
+[    0.547722] Bluetooth: HCI socket layer initialized
+[    0.547747] Bluetooth: L2CAP socket layer initialized
+[    0.547831] Bluetooth: SCO socket layer initialized
+[    0.548498] cfg80211: Calling CRDA to update world regulatory domain
+[    0.548633] NetLabel: Initializing
+[    0.548648] NetLabel:  domain hash size = 128
+[    0.548659] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.548740] NetLabel:  unlabeled traffic allowed by default
+[    0.549008] Switched to clocksource mct-frc
+[    0.665157] NET: Registered protocol family 2
+[    0.666252] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.666381] TCP bind hash table entries: 8192 (order: 5, 163840 bytes)
+[    0.666602] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.666672] TCP: reno registered
+[    0.666696] UDP hash table entries: 512 (order: 2, 24576 bytes)
+[    0.666752] UDP-Lite hash table entries: 512 (order: 2, 24576 bytes)
+[    0.667132] NET: Registered protocol family 1
+[    0.667627] RPC: Registered named UNIX socket transport module.
+[    0.667643] RPC: Registered udp transport module.
+[    0.667657] RPC: Registered tcp transport module.
+[    0.667670] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.671180] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    0.671338] audit: initializing netlink subsys (disabled)
+[    0.671399] audit: type=2000 audit(0.630:1): initialized
+[    0.698684] NFS: Registering the id_resolver key type
+[    0.698732] Key type id_resolver registered
+[    0.698747] Key type id_legacy registered
+[    0.698841] romfs: ROMFS MTD (C) 2007 Red Hat, Inc.
+[    0.699616] fuse init (API version 7.23)
+[    0.700784] kdbus: initialized
+[    0.704591] bounce: pool size: 64 pages
+[    0.704616] io scheduler noop registered
+[    0.704638] io scheduler deadline registered
+[    0.705050] io scheduler cfq registered (default)
+[    0.706305] exynos-mipi-video-phy 10040714.video-phy: regmap lookup failed: -19
+[    0.706334] exynos-mipi-video-phy 10040714.video-phy: can't request region for resource [mem 0x10040714-0x1004071f]
+[    0.706369] exynos-mipi-video-phy: probe of 10040714.video-phy failed with error -16
+[    0.708834] 12100000.phy supply vbus not found, using dummy regulator
+[    0.708964] 12100000.phy supply vbus-boost not found, using dummy regulator
+[    0.709765] 12500000.phy supply vbus not found, using dummy regulator
+[    0.709886] 12500000.phy supply vbus-boost not found, using dummy regulator
+[    0.715209] dma-pl330 3880000.adma: Loaded driver for PL330 DMAC-241330
+[    0.715230] dma-pl330 3880000.adma:  DBUFF-4x8bytes Num_Chans-6 Num_Peri-16 Num_Events-6
+[    0.722352] dma-pl330 121a0000.pdma: Loaded driver for PL330 DMAC-241330
+[    0.722372] dma-pl330 121a0000.pdma:         DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    0.729378] dma-pl330 121b0000.pdma: Loaded driver for PL330 DMAC-241330
+[    0.729398] dma-pl330 121b0000.pdma:         DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    0.731377] dma-pl330 10800000.mdma: Loaded driver for PL330 DMAC-241330
+[    0.731397] dma-pl330 10800000.mdma:         DBUFF-64x8bytes Num_Chans-8 Num_Peri-1 Num_Events-32
+[    0.890654] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.893891] 12c00000.serial: ttySAC0 at MMIO 0x12c00000 (irq = 75, base_baud = 0) is a S3C6400/10
+[    0.894776] 12c10000.serial: ttySAC1 at MMIO 0x12c10000 (irq = 76, base_baud = 0) is a S3C6400/10
+[    0.895554] 12c20000.serial: ttySAC2 at MMIO 0x12c20000 (irq = 77, base_baud = 0) is a S3C6400/10
+[    1.752971] console [ttySAC2] enabled
+[    1.757353] 12c30000.serial: ttySAC3 at MMIO 0x12c30000 (irq = 78, base_baud = 0) is a S3C6400/10
+[    1.768270] Mali: Mali device driver loaded
+[    1.772119] mali 11800000.mali: GPU identified as 0x0620 r0p1 status 0
+[    1.778564] mali 11800000.mali: Probed as mali0
+[    1.782786] [drm] Initialized drm 1.1.0 20060810
+[    1.790457] 14530000.hdmi supply hdmi-en not found, using dummy regulator
+[    1.798328] exynos-drm-gsc 13e00000.video-scaler: failed to get system register.
+[    1.804600] exynos-drm-gsc 13e00000.video-scaler: drm gsc registered successfully.
+[    1.811935] exynos-drm-gsc 13e10000.video-scaler: failed to get system register.
+[    1.819487] exynos-drm-gsc 13e10000.video-scaler: drm gsc registered successfully.
+[    1.827429] exynos-drm-ipp exynos-drm-ipp: drm ipp registered successfully.
+[    1.836919] exynos-drm exynos-drm: bound 14450000.mixer (ops mixer_component_ops)
+[    1.843380] exynos-drm exynos-drm: bound 14530000.hdmi (ops hdmi_component_ops)
+[    1.850237] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    1.856814] [drm] No driver support for vblank timestamp query.
+[    2.036108] Console: switching to colour frame buffer device 274x77
+[    2.064481] exynos-drm exynos-drm: fb0:  frame buffer device
+[    2.070107] exynos-drm exynos-drm: registered panic notifier
+[    2.089079] [drm] Initialized exynos 1.0.0 20110530 on minor 0
+[    2.112425] brd: module loaded
+[    2.126901] loop: module loaded
+[    2.129738] zram: Created 1 device(s)
+[    2.133791] tun: Universal TUN/TAP device driver, 1.6
+[    2.137414] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.144353] PPP generic driver version 2.4.2
+[    2.148139] PPP BSD Compression module registered
+[    2.152494] PPP Deflate Compression module registered
+[    2.157698] usbcore: registered new interface driver rtl8192cu
+[    2.163478] usbcore: registered new interface driver rt2800usb
+[    2.169250] usbcore: registered new interface driver r8152
+[    2.174732] usbcore: registered new interface driver asix
+[    2.180068] usbcore: registered new interface driver ax88179_178a
+[    2.186138] usbcore: registered new interface driver cdc_ether
+[    2.191977] usbcore: registered new interface driver smsc75xx
+[    2.197698] usbcore: registered new interface driver smsc95xx
+[    2.203381] usbcore: registered new interface driver net1080
+[    2.209052] usbcore: registered new interface driver cdc_subset
+[    2.214899] usbcore: registered new interface driver zaurus
+[    2.220508] usbcore: registered new interface driver cdc_ncm
+[    2.227356] usb@12000000 supply vdd33 not found, using dummy regulator
+[    2.232586] usb@12000000 supply vdd10 not found, using dummy regulator
+[    2.641541] usb@12400000 supply vdd33 not found, using dummy regulator
+[    2.646750] usb@12400000 supply vdd10 not found, using dummy regulator
+[    3.054550] dwc3 12400000.dwc3: dwc3_otg address space is not supported
+[    3.059733] usb@12400000 supply dwc3-vbus not found, using dummy regulator
+[    3.069537] dwc3 12400000.dwc3: Binding gadget dwc3-gadget
+[    3.073556] dwc3 12400000.dwc3: Turn on host
+[    3.479843] xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+[    3.483901] xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 1
+[    3.492128] xhci-hcd xhci-hcd.2.auto: hcc params 0x0220f04c hci version 0x100 quirks 0x00010010
+[    3.500265] xhci-hcd xhci-hcd.2.auto: irq 142, io mem 0x12000000
+[    3.506490] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.512967] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.520112] usb usb1: Product: xHCI Host Controller
+[    3.524967] usb usb1: Manufacturer: Linux 4.0.0-23.11-arm-odroidxu3 xhci-hcd
+[    3.531982] usb usb1: SerialNumber: xhci-hcd.2.auto
+[    3.538154] hub 1-0:1.0: USB hub found
+[    3.540622] hub 1-0:1.0: 1 port detected
+[    3.545264] xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+[    3.549954] xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 2
+[    3.557947] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[    3.564324] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.571500] usb usb2: Product: xHCI Host Controller
+[    3.576350] usb usb2: Manufacturer: Linux 4.0.0-23.11-arm-odroidxu3 xhci-hcd
+[    3.583369] usb usb2: SerialNumber: xhci-hcd.2.auto
+[    3.589518] hub 2-0:1.0: USB hub found
+[    3.591961] hub 2-0:1.0: 1 port detected
+[    3.596721] xhci-hcd xhci-hcd.5.auto: xHCI Host Controller
+[    3.601355] xhci-hcd xhci-hcd.5.auto: new USB bus registered, assigned bus number 3
+[    3.609576] xhci-hcd xhci-hcd.5.auto: hcc params 0x0220f04c hci version 0x100 quirks 0x00010010
+[    3.617674] xhci-hcd xhci-hcd.5.auto: irq 143, io mem 0x12400000
+[    3.623887] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.630343] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.637530] usb usb3: Product: xHCI Host Controller
+[    3.642381] usb usb3: Manufacturer: Linux 4.0.0-23.11-arm-odroidxu3 xhci-hcd
+[    3.649543] usb usb3: SerialNumber: xhci-hcd.5.auto
+[    3.655509] hub 3-0:1.0: USB hub found
+[    3.657992] hub 3-0:1.0: 1 port detected
+[    3.662621] xhci-hcd xhci-hcd.5.auto: xHCI Host Controller
+[    3.667369] xhci-hcd xhci-hcd.5.auto: new USB bus registered, assigned bus number 4
+[    3.675367] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003
+[    3.681730] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.688917] usb usb4: Product: xHCI Host Controller
+[    3.693767] usb usb4: Manufacturer: Linux 4.0.0-23.11-arm-odroidxu3 xhci-hcd
+[    3.701018] usb usb4: SerialNumber: xhci-hcd.5.auto
+[    3.706900] hub 4-0:1.0: USB hub found
+[    3.709462] hub 4-0:1.0: 1 port detected
+[    3.714110] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.719799] ehci-exynos: EHCI EXYNOS driver
+[    3.724571] exynos-ehci 12110000.usb: EHCI Host Controller
+[    3.729432] exynos-ehci 12110000.usb: new USB bus registered, assigned bus number 5
+[    3.737379] exynos-ehci 12110000.usb: irq 136, io mem 0x12110000
+[    3.749088] exynos-ehci 12110000.usb: USB 2.0 started, EHCI 1.00
+[    3.754125] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.760459] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.767601] usb usb5: Product: EHCI Host Controller
+[    3.772451] usb usb5: Manufacturer: Linux 4.0.0-23.11-arm-odroidxu3 ehci_hcd
+[    3.779474] usb usb5: SerialNumber: 12110000.usb
+[    3.785357] hub 5-0:1.0: USB hub found
+[    3.787809] hub 5-0:1.0: 3 ports detected
+[    3.793095] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    3.797966] ohci-exynos: OHCI EXYNOS driver
+[    3.802561] exynos-ohci 12120000.usb: USB Host Controller
+[    3.807507] exynos-ohci 12120000.usb: new USB bus registered, assigned bus number 6
+[    3.815331] exynos-ohci 12120000.usb: irq 136, io mem 0x12120000
+[    3.859125] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[    3.878396] usb usb6: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.883743] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.892031] usb usb6: Product: USB Host Controller
+[    3.895704] usb usb6: Manufacturer: Linux 4.0.0-23.11-arm-odroidxu3 ohci_hcd
+[    3.902714] usb usb6: SerialNumber: 12120000.usb
+[    3.908549] hub 6-0:1.0: USB hub found
+[    3.911275] hub 6-0:1.0: 3 ports detected
+[    3.916465] usbcore: registered new interface driver usb-storage
+[    3.921758] usbcore: registered new interface driver usbserial
+[    3.926948] usbcore: registered new interface driver option
+[    3.932615] usbserial: USB Serial support registered for GSM modem (1-port)
+[    3.940936] mousedev: PS/2 mouse device common for all mice
+[    3.954788] s5m-rtc s2mps14-rtc: rtc core: registered s5m-rtc as rtc0
+[    3.960319] i2c /dev entries driver
+[    3.966538] IR NEC protocol handler initialized
+[    3.969638] IR RC5(x/sz) protocol handler initialized
+[    3.974795] IR RC6 protocol handler initialized
+[    3.979211] IR JVC protocol handler initialized
+[    3.983635] IR Sony protocol handler initialized
+[    3.988263] IR SANYO protocol handler initialized
+[    3.992941] IR Sharp protocol handler initialized
+[    3.997664] IR MCE Keyboard/mouse protocol handler initialized
+[    4.003480] IR XMP protocol handler initialized
+[    4.011507] s5p-jpeg 11f50000.jpeg: sclk clock not available
+[    4.015781] usb 1-1: New USB device found, idVendor=05e3, idProduct=0610
+[    4.022503] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    4.022577] s5p-jpeg 11f50000.jpeg: encoder device registered as /dev/video0
+[    4.029760] s5p-jpeg 11f50000.jpeg: decoder device registered as /dev/video1
+[    4.029771] s5p-jpeg 11f50000.jpeg: Samsung S5P JPEG codec
+[    4.030265] s5p-jpeg 11f60000.jpeg: sclk clock not available
+[    4.030956] s5p-jpeg 11f60000.jpeg: encoder device registered as /dev/video2
+[    4.031625] s5p-jpeg 11f60000.jpeg: decoder device registered as /dev/video3
+[    4.031637] s5p-jpeg 11f60000.jpeg: Samsung S5P JPEG codec
+[    4.032686] s5p_mfc_init_pm:56: Failed to get MFC special clock control
+[    4.037254] s5p-mfc 11000000.codec: decoder registered as /dev/video4
+[    4.037934] s5p-mfc 11000000.codec: encoder registered as /dev/video5
+[    4.046141] usbcore: registered new interface driver dvb_usb_dib0700
+[    4.046479] usbcore: registered new interface driver dvb_usb_mxl111sf
+[    4.046942] usbcore: registered new interface driver uvcvideo
+[    4.046950] USB Video Class driver (1.1.1)
+[    4.046965] au0828: au0828 driver loaded
+[    4.047342] usbcore: registered new interface driver au0828
+[    4.050968] thermal thermal_zone0: failed to read out thermal zone (-22)
+[    4.051063] 10060000.tmu supply vtmu not found, using dummy regulator
+[    4.052056] thermal thermal_zone1: failed to read out thermal zone (-22)
+[    4.052140] 10064000.tmu supply vtmu not found, using dummy regulator
+[    4.053121] thermal thermal_zone2: failed to read out thermal zone (-22)
+[    4.053202] 10068000.tmu supply vtmu not found, using dummy regulator
+[    4.054376] thermal thermal_zone3: failed to read out thermal zone (-22)
+[    4.054458] 1006c000.tmu supply vtmu not found, using dummy regulator
+[    4.055540] thermal thermal_zone4: failed to read out thermal zone (-22)
+[    4.055621] 100a0000.tmu supply vtmu not found, using dummy regulator
+[    4.059123] s3c2410-wdt 101d0000.watchdog: watchdog inactive, reset disabled, irq disabled
+[    4.061213] device-mapper: ioctl: 4.30.0-ioctl (2014-12-22) initialised: dm-devel@redhat.com
+[    4.061232] Bluetooth: HCI UART driver ver 2.2
+[    4.061613] usbcore: registered new interface driver btusb
+[    4.068958] cpu cpu0: bL_cpufreq_init: CPU 0 initialized
+[    4.081598] cpu cpu1: bL_cpufreq_init: CPU 1 initialized
+[    4.085733] arm_big_little: bL_cpufreq_register: Registered platform driver: dt-bl
+[    4.086716] Driver 'mmcblk' needs updating - please use bus_type methods
+[    4.086851] sdhci: Secure Digital Host Controller Interface driver
+[    4.086860] sdhci: Copyright(c) Pierre Ossman
+[    4.087491] Synopsys Designware Multimedia Card Interface Driver
+[    4.089289] dwmmc_exynos 12200000.mmc: num-slots property not found, assuming 1 slot is available
+[    4.089456] dwmmc_exynos 12200000.mmc: IDMAC supports 32-bit address mode.
+[    4.089583] dwmmc_exynos 12200000.mmc: Using internal DMA controller.
+[    4.089597] dwmmc_exynos 12200000.mmc: Version ID is 250a
+[    4.089710] dwmmc_exynos 12200000.mmc: DW MMC controller at irq 107, 64 bit host data width, 64 deep fifo
+[    4.089766] dwmmc_exynos 12200000.mmc: No vmmc regulator found
+[    4.089774] dwmmc_exynos 12200000.mmc: No vqmmc regulator found
+[    4.090302] dwmmc_exynos 12200000.mmc: allocated mmc-pwrseq
+[    4.119264] dwmmc_exynos 12200000.mmc: 1 slots initialized
+[    4.119827] dwmmc_exynos 12220000.mmc: num-slots property not found, assuming 1 slot is available
+[    4.119948] dwmmc_exynos 12220000.mmc: IDMAC supports 32-bit address mode.
+[    4.120051] dwmmc_exynos 12220000.mmc: Using internal DMA controller.
+[    4.120064] dwmmc_exynos 12220000.mmc: Version ID is 250a
+[    4.120176] dwmmc_exynos 12220000.mmc: DW MMC controller at irq 108, 64 bit host data width, 64 deep fifo
+[    4.120224] dwmmc_exynos 12220000.mmc: No vmmc regulator found
+[    4.120231] dwmmc_exynos 12220000.mmc: No vqmmc regulator found
+[    4.120328] dwmmc_exynos 12220000.mmc: Got CD GPIO
+[    4.149641] dwmmc_exynos 12220000.mmc: 1 slots initialized
+[    4.150088] sdhci-pltfm: SDHCI platform and OF driver helper
+[    4.152625] hidraw: raw HID events driver (C) Jiri Kosina
+[    4.156187] usbcore: registered new interface driver usbhid
+[    4.156193] usbhid: USB HID core driver
+[    4.158705] usbcore: registered new interface driver snd-usb-audio
+[    4.162814] platform sound: Driver asoc-simple-card requests probe deferral
+[    4.166411] u32 classifier
+[    4.166418]     Actions configured
+[    4.166468] Netfilter messages via NETLINK v0.30.
+[    4.166597] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    4.168183] ctnetlink v0.93: registering with nfnetlink.
+[    4.168835] xt_time: kernel timezone is -0000
+[    4.169458] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    4.169748] arp_tables: (C) 2002 David S. Miller
+[    4.169867] TCP: bic registered
+[    4.169879] TCP: cubic registered
+[    4.169891] Initializing XFRM netlink socket
+[    4.172953] NET: Registered protocol family 10
+[    4.174630] mip6: Mobile IPv6
+[    4.174709] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    4.175121] sit: IPv6 over IPv4 tunneling driver
+[    4.178609] NET: Registered protocol family 17
+[    4.178672] NET: Registered protocol family 15
+[    4.178773] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    4.178837] Bridge firewalling registered
+[    4.178857] Ebtables v2.0 registered
+[    4.179217] Bluetooth: RFCOMM TTY layer initialized
+[    4.179248] Bluetooth: RFCOMM socket layer initialized
+[    4.179300] Bluetooth: RFCOMM ver 1.11
+[    4.179360] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    4.179388] Bluetooth: HIDP socket layer initialized
+[    4.179517] 8021q: 802.1Q VLAN Support v1.8
+[    4.179611] Key type dns_resolver registered
+[    4.179987] Registering SWP/SWPB emulation handler
+[    4.183351] max98090 5-0010: Failed to reset codec: -6
+[    4.183490] max98090 5-0010: Failed to read device revision: -1
+[    4.183496] max98090 5-0010: ASoC: failed to probe component -1
+[    4.183571] asoc-simple-card sound: ASoC: failed to instantiate card -1
+[    4.183714] asoc-simple-card: probe of sound failed with error -1
+[    4.185978] power-domain@10044120: Power-off latency exceeded, new value 846875 ns
+[    4.186483] power-domain@10044020: Power-off latency exceeded, new value 460084 ns
+[    4.187736] using random self ethernet address
+[    4.187748] using random host ethernet address
+[    4.187858] slp_multi_composite gadget: slp_multi_composite ready
+[    4.189947] input: gpio_keys as /devices/platform/gpio_keys/input/input0
+[    4.199149] s5m-rtc s2mps14-rtc: setting system clock to 2000-01-01 00:00:06 UTC (946684806)
+[    4.311691] ALSA device list:
+[    4.311698]   No soundcards found.
+[    4.378065] mmc0: MAN_BKOPS_EN bit is not set
+[    4.385068] mmc_host mmc0: Bus speed (slot 0) = 200000000Hz (slot req 200000000Hz, actual 200000000HZ div = 0)
+[    4.385580] mmc_host mmc0: Bus speed (slot 0) = 50000000Hz (slot req 52000000Hz, actual 50000000HZ div = 0)
+[    4.386836] mmc_host mmc0: Bus speed (slot 0) = 100000000Hz (slot req 52000000Hz, actual 50000000HZ div = 1)
+[    4.386857] mmc_host mmc0: Bus speed (slot 0) = 400000000Hz (slot req 200000000Hz, actual 200000000HZ div = 1)
+[    4.387196] mmc0: new HS400 MMC card at address 0001
+[    4.387849] mmcblk0: mmc0:0001 SDW32G 29.1 GiB 
+[    4.388072] mmcblk0boot0: mmc0:0001 SDW32G partition 1 4.00 MiB
+[    4.388287] mmcblk0boot1: mmc0:0001 SDW32G partition 2 4.00 MiB
+[    4.388494] mmcblk0rpmb: mmc0:0001 SDW32G partition 3 4.00 MiB
+[    4.390582]  mmcblk0: p1 p2 p3 p4 < p5 p6 >
+[   �1: Product: USB2.0 Hub
+[    4.700124] usb 1-1: Manufacturer: GenesysLogic
+[    4.702361] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+[    4.702369] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+[    4.742013] hub 1-1:1.0: USB hub found
+[    4.744571] hub 1-1:1.0: 2 ports detected
+[    4.747423] EXT4-fs (mmcblk0p2): recovery complete
+[    4.748163] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    4.748242] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+[    4.757998] devtmpfs: mounted
+[    4.758722] Freeing unused kernel memory: 732K (c0d9d000 - c0e54000)
+[    4.763984] random: nonblocking pool is initialized
+[    4.834081] usb 3-1: new high-speed USB device number 3 using xhci-hcd
+[    4.854252] systemd[1]: Successfully loaded Smack policies.
+[    4.859928] systemd[1]: Successfully loaded Smack/CIPSO policies.
+[    4.864991] systemd[1]: Successfully loaded Smack network host rules.
+[    4.903151] systemd[1]: Relabelled /dev and /run in 29.564ms.
+[    4.913982] systemd[1]: systemd 219 running in system mode. (+PAM -AUDIT -SELINUX +IMA -APPARMOR +SMACK -SYSVINIT +UTMP -LIBCRYPTSETUP +GCRYPT -GNUTLS +ACL +XZ -LZ)
+[    4.930731] systemd[1]: Detected architecture 'arm'.
+
+Welcome to Tizen 3.0.0 (Tizen3/TV)!
+
+[    4.949204] systemd[1]: No hostname configured.
+[    4.952270] systemd[1]: Set hostname to <localhost>.
+[    4.998491] systemd-dbus1-generator[1829]: Configuration file /usr/share/dbus-1/system-services/org.tizen.scmirroring.server.service is marked executable. Please r.
+[    5.050902] systemd[1]: [/usr/lib/systemd/system/bluetooth.service:14] Unknown lvalue 'SmackExecLabel' in section 'Service'
+[    5.077993] systemd[1]: Configuration file /usr/lib/systemd/system/crash-init.service is marked executable. Please remove executable permission bits. Proceeding an.
+[    5.084482] usb 1-1.1: new low-speed USB device number 3 using xhci-hcd
+[    5.099149] systemd[1]: [/usr/lib/systemd/system/crash-init.service:7] Failed to parse service type, ignoring: normal
+[    5.167778] systemd[1]: Configuration file /usr/lib/systemd/system/smack-rules.service is marked executable. Please remove executable permission bits. Proceeding a.
+[    5.177944] usb 1-1.1: New USB device found, idVendor=17ef, idProduct=6009
+[    5.177953] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    5.177962] usb 1-1.1: Product: ThinkPad USB Keyboard with TrackPoint
+[    5.177969] usb 1-1.1: Manufacturer: Lite-On Technology Corp.
+[    5.181449] usb 1-1.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[    5.181538] usb 1-1.1: ep 0x82 - rounding interval to 64 microframes, ep desc says 80 microframes
+[    5.189677] usb 2-1: new SuperSpeed USB device number 2 using xhci-hcd
+[    5.195904] input: Lite-On Technology Corp. ThinkPad USB Keyboard with TrackPoint as /devices/platform/usb@12000000/12000000.dwc3/xhci-hcd.2.auto/usb1/1-1/1-1.1/1-1
+[    5.206809] usb 2-1: New USB device found, idVendor=05e3, idProduct=0616
+[    5.206816] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    5.206822] usb 2-1: Product: USB3.0 Hub
+[    5.206828] usb 2-1: Manufacturer: GenesysLogic
+[    5.222336] hub 2-1:1.0: USB hub found
+[    5.222638] hub 2-1:1.0: 2 ports detected
+[    5.250013] hid-generic 0003:17EF:6009.0001: input,hidraw0: USB HID v1.10 Keyboard [Lite-On Technology Corp. ThinkPad USB Keyboard with TrackPoint] on usb-xhci-hcd0
+[    5.261104] input: Lite-On Technology Corp. ThinkPad USB Keyboard with TrackPoint as /devices/platform/usb@12000000/12000000.dwc3/xhci-hcd.2.auto/usb1/1-1/1-1.1/1-2
+[    5.313929] systemd[1]: Configuration file /usr/lib/systemd/system/smack-rules.service is marked world-inaccessible. This has no effect as configuration data is ac.
+[    5.315356] hid-generic 0003:17EF:6009.0002: input,hidraw1: USB HID v1.10 Mouse [Lite-On Technology Corp. ThinkPad USB Keyboard with TrackPoint] on usb-xhci-hcd.2.1
+[    5.360247] systemd[1]: Cannot add dependency job for unit resize2fs@dev-disk-by\x2dlabel-system\x2ddata.service, ignoring: Unit resize2fs@dev-disk-by\x2dlabel-sys.
+[    5.376004] systemd[1]: Cannot add dependency job for unit resize2fs@dev-disk-by\x2dlabel-user.service, ignoring: Unit resize2fs@dev-disk-by\x2dlabel-user.service .
+[    5.391405] systemd[1]: Cannot add dependency job for unit resize2fs@dev-disk-by\x2dlabel-rootfs.service, ignoring: Unit resize2fs@dev-disk-by\x2dlabel-rootfs.serv.
+[    5.407193] systemd[1]: Cannot add dependency job for unit accounts-service.service, ignoring: Unit tizen-runtime.target failed to load: No such file or directory.
+[    5.421779] systemd[1]: Cannot add dependency job for unit dbus.service, ignoring: Unit dbus.service is masked.
+[    5.429119] usb 3-1: new high-speed USB device number 4 using xhci-hcd
+[    5.438302] systemd[1]: Cannot add dependency job for unit media-server.service, ignoring: Unit vconf-setup.service failed to load: No such file or directory.
+[    5.452516] systemd[1]: Cannot add dependency job for unit notifications.service, ignoring: Unit vconf-setup.service failed to load: No such file or directory.
+[  OK  ] Reached target Swap.
+[    5.479113] systemd[1]: Reached target Swap.
+[    5.481918] systemd[1]: Starting �[  OK  ] Created slice Root Slice.
+[    5.499114] systemd[1]: Created slice Root Slice.
+[    5.502348] systemd[1]: Starting Root Slice.
+[  OK  ] Created slice System Slice.
+[    5.519099] systemd[1]: Created slice System Slice.
+[    5.522518] systemd[1]: Starting System [  OK  ] Listening on udev Control Socket.
+[    5.539099] systemd[1]: Listening on udev Control Socket.
+[    5.543032] systemd[1]: Starting udev Control@[  OK  ] Listening on udev Kernel Socket.
+[    5.554714] usb 3-1: New USB device found, idVendor=0bda, idProduct=8153
+[    5.559969] usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=6
+[    5.567162] usb 3-1: Product: USB 10/100/1000 LAN
+[    5.571750] usb 3-1: Manufacturer: Realtek
+[    5.575813] usb 3-1: SerialNumber: 000001000000
+[    5.584104] systemd[1]: Listening on udev Kernel Socket.
+[    5.587948] systemd[1]: Starting udev Kernel@[  OK  ] Listening on Journal Audit Socket.
+[    5.604104] systemd[1]: Listening on Journal Audit Socket.
+[    5.608118] systemd[1]: Starting Journal Audit So�[  OK  ] Listening on Journal Socket (/dev/log).
+[    5.624103] systemd[1]: Listening on Journal Socket (/dev/log).
+[    5.628549] systemd[1]: Starting Journal Socket (/dev/log).
+[  OK  ] Created slice system-systemd\x2dfsck.slice.
+[    5.649102] systemd[1]: Created slice system-systemd\x2dfsck.slice.
+[    5.653901] systemd[1]: Starting system-systemd\x2dfsck.[  OK  ] Listening on Journal Socket.
+[    5.674098] systemd[1]: Listening on Journal Socket.
+[    5.677596] systemd[1]: Starting Journal Socket.
+[    5.683296] systemd[1]: Started Create list of required static device nodes for the current kernel.
+[    5.693826] systemd[1]: Starting Apply Kernel Varia         Starting Apply Kernel Variables...
+[    5.716852] systemd[1]: Starting Dlog kmsg devices initial         Starting Dlog kmsg devices initializer...
+[    5.736662] systemd[1]: Starting udev Coldplug all De�         Starting udev Coldplug all Devices...
+[    5.759217] usb 3-1: reset high-speed USB device number 4 using xhci-hcd
+[    5.767688] systemd[1]: Starting Create Static Device Nodes in /�         Starting Create Static Device Nodes in /dev...
+[    5.790290] systemd[1]: Mounting Configuration File Sys         Mounting Configuration File System...
+[    5.810843] systemd[1]: Starting Journal Serv�         Starting Journal Service...
+[    5.827974] systemd[1]: Starting prepare device da�         Starting prepare device daemon...
+[    5.847138] systemd[1]: Starting Setup Virtual Conso         Starting Setup Virtual Console...
+[    5.868791] systemd[1]: Starting File System Check on Root Devic         Starting File System Check on Root Device...
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[    5.899133] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[    5.903940] systemd[1]: Starting system-serial\x2dgetty.slice.
+[    5.907656] systemd[1]: Starting Generate environment from /etc/profile         Starting Gener[    5.918497] systemd[1]: Listening on Delayed Shutdown Socket.
+[    5.924505] systemd[1]: Starting Delayed Shutdown Socket.
+ate environment from /etc/profile.d...
+[   5.933845] systemd[1]: Mounting Temporary Directory...
+[    5.936250] r8152 3-1:1.0 eth0: v1.08.0 (2015/01/13)
+[    5.943929] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[    5.950244] systemd[1]: Starting /dev/initctl Compatibility Named Pipe.
+[32m  OK  ] Listening on Delayed Shutd[    5.960846] systemd[1]: Mounting Debug File System...
+own Socket.
+ [    5.966974] systemd[1]: Created slice User and Session Slice.
+[    5.972432] systemd[1]: Starting User and Session Slice.
+[    5.977826] systemd[1]: Reached target Slices.
+[    5.982117] systemd[1]: Starting Slices.
+[    5.986064] systemd[1]: Mounted POSIX Message Queue File System.
+[    5.992072] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+        Mounting Temporary Directory...
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+         Mounting Debug File System...
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Reached target Slices.
+[    5.974019] systemd-fsck[2189]: rootfs: clean, 12798/48000 files, 167030/175079 blocks[  OK  
+] Mounted Configuration File System.
+[    6.049197] systemd[1]: Mounted Configuration File [  OK  ] Mounted Debug File System.
+[    6.064249] systemd[1]: Mounted Debug File Sys[  OK  ] Mounted Temporary Directory.
+[    6.079168] systemd[1]: Mounted Temporary Directory.
+[  OK  ] Started Journal Service.
+[    6.094140] systemd[1]: Started Journal Service.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Dlog kmsg devices initializer.
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Started prepare device daemon.
+[  OK  ] Started Setup Virtual Console.
+[  OK  ] Started File System Check on Root Device.
+         Starting Remount Root and Kernel File Systems...
+[    6.268703] EXT4-fs (mmcblk0p2): re-mounted. Opts: (n         Starting udev Kernel Device Manager...
+[  OK  ] Started T-trace marker.
+         Starting T-trace marker...
+[  OK  ] Started Generate environment from /etc/profile.d.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Reached target Local File Systems (Pre).
+         Starting Flush Journal to Persistent Storage...
+[    6.444534] systemd-journald[2047]: Received request to flush runtime journal from PID 1
+[  OK  ] Started Flush Journal to Persistent Storage.
+         Mounting FUSE Control File System...
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Found device /dev/ttySAC2.
+[  OK  ] Found device /dev/disk/by-label/user.
+[  OK  ] Found device /dev/disk/by-label/system-data.
+         Starting File System Check on /dev/disk/by-label/system-data...
+         Starting File System Check on /dev/disk/by-label/user...
+[    6.830247] systemd-fsck[3332]: system-data: recovering journal
+[    6.853326] systemd-fsck[3334]: user: recovering journal
+[    6.854953] systemd-fsck[3332]: system-data: clean, 71/8192 files, 4859/12605 blocks
+[  OK  ] Started File System Check on /dev/disk/by-label/system-data.
+         Mounting /opt...
+[    6.939694] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[  OK  ] Mounted /opt.
+[    6.915636] systemd-fsck[3334]: user: clean, 66/8000 files, 17220/24712 blocks
+[  OK  ] Started File System Check on /dev/disk/by-label/user.
+         Mounting /opt/usr...
+[    7.012842] EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+[  OK  ] Mounted /opt/usr.
+[  OK  ] Reached target Local File Systems.
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Crash init.
+         Starting Crash init...
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on DBUS1: org.tizen.PhonenumberUtils.dbus.
+[FAILED] Failed to listen on DBUS1: org.tizen.serviceadaptor.client.
+See "systemctl status org.tizen.serviceadaptor.client.busname" for details.
+[  OK  ] Listening on central-key-manager-api-storage.socket.
+[  OK  ] Listening on DBUS1: org.tizen.voice.ttssrserver.
+[  OK  ] Listening on download-provider.socket.
+[  OK  ] Listening on DBUS1: org.bluez.
+[  OK  ] Listening on System and Service Manager Bus Name.
+[  OK  ] Listening on DBUS1: net.connman.
+[  OK  ] Listening on cynara.socket.
+[  OK  ] Listening on central-key-manager-api-encryption.socket.
+[  OK  ] Listening on muse-server.socket.
+[  OK  ] Listening on DBUS1: org.tizen.vpnsvc.
+[  OK  ] Listening on DBUS1: org.tizen.voice.ttsserver.
+[  OK  ] Listening on cynara-admin.socket.
+[  OK  ] Listening on Virtual Machine and Co...r Registration Service Bus Name.
+[  OK  ] Listening on browser-provider.socket.
+[  OK  ] Listening on DBUS1: org.tizen.alarm.manager.
+[  OK  ] Listening on DBUS1: org.tizen.voice.ttsnotiserver.
+[  OK  ] Listening on DBUS1: org.tizen.account.manager.
+[  OK  ] Listening on DBUS1: org.tizen.scmirroring.server.
+[  OK  ] Listening on Legacy D-Bus Protocol Compatibility Socket.
+[FAILED] Failed to listen on DBUS1: ALARM.acalendar-service.
+See "systemctl status ALARM.acalendar-service.busname" for details.
+[  OK  ] Listening on DBUS1: org.O1.SecurityAccounts.gUserManagement.
+[  OK  ] Listening on DBUS1: org.tizen.voice.sttserver.
+[  OK  ] Listening on DBUS1: org.projectx.bt_core.
+[  OK  ] Listening on security-manager.socket.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on DBUS1: net.netconfig.
+         Starting Restore Sound Card State...
+[  OK  ] Listening on Locale Service Bus Name.
+[  OK  ] Listening on Login Service Bus Name.
+[  OK  ] Listening on central-key-manager-api-control.socket.
+[  OK  ] Listening on Time & Date Service Bus Name.
+[  OK  ] Listening on DBUS1: org.projectx.bt.
+[  OK  ] Listening on Sensor daemon socket.
+[  OK  ] Listening on central-key-manager-api-ocsp.socket.
+         Starting Start the Central Key Manager...
+[  OK  ] Reached target Central Key Manager sockets.
+[  OK  ] Listening on DBUS1: net.connman.vpn.
+[  OK  ] Listening on DBUS1: org.tizen.pkgmgr.
+[  OK  ] Listening on Hostname Service Bus Name.
+[  OK  ] Reached target Bus Names.
+[  OK  ] Listening on Buxton2 Configuration Service.
+[  OK  ] Listening on System server socket.
+[  OK  ] Listening on Resourced socket.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on cynara-agent.socket.
+[  OK  ] Reached target cynara sockets.
+[  OK  ] Listening on cert-server.socket.
+[  OK  ] Listening on MediaController Service socket.
+[  OK  ] Started Restore Sound Card State.
+[  OK  ] Started Start the Central Key Manager.
+         Starting Import APP DEKs for Preloaded Web App Decryption...
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Alarm server...
+         Starting Network Configuration service...
+[  OK  ] Started Tizen IoT Connectivity.
+         Starting Tizen IoT Connectivity...
+         Starting Permit User Sessions...
+         Starting Making Tizen ID...
+         Starting Bluetooth service...
+[  OK  ] Started Start the Event System Daemon.
+         Starting Start the Event System Daemon...
+         Starting Display manager run service...
+[  OK  ] Started Accounts service.
+         Starting Accounts service...
+         Starting SMACK rules loading...
+[  OK  ] Started Notifications daemon.
+         Starting Notifications daemon...
+         Starting ConnMan VPN service...
+[  OK  ] Started Download provider service.
+         Starting Download provider service...
+         Starting Cynara service...
+         Starting Display manager setup service...
+         Starting Cleanup private sharing...
+[  OK  ] Started System device daemon.
+         Starting System device daemon...
+[  OK  ] Started browser provider service.
+         Starting browser provider service...
+         Starting sdbd...
+[  OK  ] Started Resource management daemon.
+         Starting Resource management daemon...
+         Starting pulseaudio service...
+[    8.982151] sdb_open
+         Starting Connection service...
+         Starting Sensor Daemon...
+[  OK  ] Started Start cert server for cert-svc managing root ssl certs.
+         Starting Start cert server for cert-svc managing root ssl certs...
+[  OK  ] Started Media server.
+         Starting Media server...
+[  OK  ] Started Telephony daemon.
+         Starting Telephony daemon...
+         Starting Login Service...
+[  OK  ] Started Sensor Daemon.
+[  OK  ] Started Import APP DEKs for Preloaded Web App Decryption.
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started SMACK rules loading.
+[FAILED] Failed to start Display manager setup service.
+See "systemctl status display-manager.service" for details.
+[  OK  ] Started Cleanup private sharing.
+[  OK  ] Started sdbd.
+[  OK  ] Started Network Configuration service.
+[  OK  ] Started Making Tizen ID.
+[  OK  ] Started Cynara service.
+[  OK  ] Started Connection service.
+[    9.355210] audit: type=1325 audit(946684811.660:2): table=filter family[  OK  ] Started Bluetooth service.
+[    9.372345] audit: type=1325 audit(946684811.675:3): table=mangle family=2 entries=6
+[  OK  ] Started ConnMan VPN service.
+[  OK  ] Started Login Service.
+[    9.425919] audit: type=1325 audit(946684811.730:4): table=mangle family=2 entries=6
+[  OK  ] Started Buxton2 Configuration Service.
+[    9.442769] audit: type=1325 audit(946684811.745:5): table=mangle family=2 entries=10
+         Starting Buxton2 Configuration Service...
+[  OK  ] Started Start the TV service daemon.
+         Starting Start the TV service daemon...
+[  OK  ] Started Tiny Login Manager.
+[    9.514856] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+         Starting Tiny Login Manager...
+[  OK  ] Started Serial Getty on ttySAC2.
+         Starting Serial Getty on ttySAC2...
+[  OK  ] Reached target Login Prompts.
+[    9.614153] systemd[1]: Cannot add dependency job for unit resize2fs@dev-disk-by\x2dlabel-rootfs.service, ignoring: Unit resize2fs@dev-disk-by\x2dlabel-rootfs.serv.
+[  OK  ] Started Alarm server.
+[  OK  ] Created slice user-5001.slice.
+[    ytype=1325 audit(946684812.020:6): table=filter family=2 entries=0
+[    9.723504] audit: type=1325 audit(946684812.025:7): table=mangle family=2 entries=0
+[    9.731133] audit: type=1325 audit(946684812.035:8): table=raw family=2 entries=0
+[    9.738549] audit: type=1325 audit(946684812.040:9): table=filter family=3 entries=0
+[    9.746721] audit: type=1325 audit(946684812.050:10): table=filter family=10 entries=0
+[    9.754210] audit: type=1325 audit(946684812.060:11): table=mangle family=10 entries=0
+         Starting Hostname Service...
+[    9.766504] slp_multi_usb: Cannot enable 'mtp' (-22)
+[    9.770366] slp_multi_usb: Cannot enable 'mtp' (-22)         Starting Bluetooth service...
+[  OK  ] Started Bluetooth service.
+[  OK  ] Started Hostname Service.
+         Stopping sdbd...
+         Starting User Manager for UID 5001...
+         Starting Display manager setup service...
+systemd[1]: Cannot add dependency job for unit resize2fs@dev-disk-by\x2dlabel-user.service, ignoring: Unit resize2fs@dev-disk-by\x2dlabel-user.service is masked.
+[  OK  ] Started Display manager setup service.
+[   10.490571] systemd[1]: Cannot add dependency job for unit resize2fs@dev-disk-by\x2dlabel-system\x2ddata.service, ignoring: Unit resize2fs@dev-disk-by\x2dlabel-sys.
+[  OK  ] Started pulseaudio service.
+[  OK  ] Started Start the focus profile service.
+         Starting Start the focus profile service...
+[  OK  ] Started Start the sound profile service.
+         Starting Start the sound profile service...
+         Starting DBUS1: org.projectx.bt_core...
+[  OK  ] Started DBUS1: org.projectx.bt_core.
+[   10.895297] sdb_release
+[  OK  ] Stopped sdbd.
+[  OK  ] Started User Manager for UID 5001.
+[   13.148296] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+
+localhost login: root
+Password: 
+[   19.517939] audit_printk_skb: 3 callbacks suppressed
+[   19.521479] audit: type=1400 audit(946684821.820:13): lsm=SMACK fn=smack_key_permission action=denied subject="System" object="_" requested=w pid=3500 comm="login""
+Welcome to Tizen
+root@localhost:~# ls /etc/          
+Display all 114 possibilities? (y or n)
+root@localhost:~# ls /etc/tizen
+tizen-build.conf     tizen-release        
+tizen-platform.conf  tizenid              
+root@localhost:~# more /etc/tizen-release                                                                                                                              
+Tizen3/TV 3.0.0 (arm)
+VERSION = 3.0.0
+CODENAME = Next
+BUILD_ID=tizen-tv_20160219.2_tv-wayland-armv7l-odroidu3
+root@localhost:~# 
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7 | VT102 | Offline | ttyUSB0                                                                                        
+
