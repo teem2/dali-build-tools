@@ -5,11 +5,12 @@
 # Ubuntu 14.04 Bash build script for DALi 3D Framework with Node.js support
 #
 # Required software for the build:
-#   + Node.js 0.12.4
+#   + Node.js 4.2.6
+#     https://github.com/nodejs/node/releases/tag/v4.2.6
 #     Build from source following these instructions
 #     https://github.com/joyent/node/wiki/installation#building-on-linux
 #     The Node.js source code should be in folder:
-#     /home/$USER/node-v0.12.4
+#     /home/$USER/node-4.2.6
 #     If you have the Node.js source code in a different location, you can
 #     adjust the node_folder variable below.
 #
@@ -21,7 +22,7 @@
 
 ### CONFIGURATON OPTIONS ###
 export DALI_BUILD_HOME=~/dali-nodejs
-node_folder=`echo "/home/$USER"`/node-v0.12.4
+node_folder=`echo "/home/$USER"`/node-4.2.6
 # Enable network logging for Dali adaptor. Possible values: 0 | 1
 enable_network_logging=1 
 
@@ -95,7 +96,6 @@ make install -j$DALI_MAKE_CORS
 cd $DALI_BUILD_HOME
 git clone ssh://$TIZEN_USER@review.tizen.org:29418/platform/core/uifw/dali-demo
 cd dali-demo
-# DALi demo does not work with current version of DALi + Node.js
 cd $DALI_BUILD_HOME/dali-demo/build/tizen
 cmake -DCMAKE_INSTALL_PREFIX=$DESKTOP_PREFIX .
 make install -j$DALI_MAKE_CORS
